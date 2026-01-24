@@ -4,11 +4,9 @@ import { StyleSheet, View } from 'react-native';
 export function Home() {
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
+      <Text style={styles.title}>Commit</Text>
       <Text>Open up 'src/App.tsx' to start working on your app!</Text>
-      <Button screen="Profile" params={{ user: 'jane' }}>
-        Go to Profile
-      </Button>
+      
       <Button screen="Settings">Go to Settings</Button>
     </View>
   );
@@ -21,4 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
   },
+  title: {
+    fontSize: 50,
+  }
 });

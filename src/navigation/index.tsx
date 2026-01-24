@@ -9,10 +9,13 @@ import { Image } from 'react-native';
 import bell from '../assets/bell.png';
 import newspaper from '../assets/newspaper.png';
 import { Home } from './screens/Home';
-import { Profile } from './screens/Profile';
+import { Goal } from './screens/Goal';
 import { Settings } from './screens/Settings';
-import { Updates } from './screens/Updates';
+import { Profile } from './screens/Profile';
 import { NotFound } from './screens/NotFound';
+import { WeekTracker } from './screens/WeekTracker';
+import { LearningTracker } from './screens/LearningTracker';
+
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
@@ -32,8 +35,38 @@ const HomeTabs = createBottomTabNavigator({
         ),
       },
     },
-    Updates: {
-      screen: Updates,
+    WeekTracker: {
+      screen: WeekTracker,
+      options: {
+        tabBarIcon: ({ color, size }) => (
+          <Image
+            source={bell}
+            tintColor={color}
+            style={{
+              width: size,
+              height: size,
+            }}
+          />
+        ),
+      },
+    },
+    LearningTracker: {
+      screen: LearningTracker,
+      options: {
+        tabBarIcon: ({ color, size }) => (
+          <Image
+            source={bell}
+            tintColor={color}
+            style={{
+              width: size,
+              height: size,
+            }}
+          />
+        ),
+      },
+    },
+    Profile: {
+      screen: Profile,
       options: {
         tabBarIcon: ({ color, size }) => (
           <Image
@@ -59,8 +92,8 @@ const RootStack = createNativeStackNavigator({
         headerShown: false,
       },
     },
-    Profile: {
-      screen: Profile,
+    Goal: {
+      screen: Goal,
       linking: {
         path: ':user(@[a-zA-Z0-9-_]+)',
         parse: {

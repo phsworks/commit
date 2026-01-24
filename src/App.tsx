@@ -10,7 +10,7 @@ import { Navigation } from './navigation';
 Asset.loadAsync([
   ...NavigationAssets,
   require('./assets/newspaper.png'),
-  require('./assets/bell.png'),
+  require('./assets/newspaper.png'),
 ]);
 
 SplashScreen.preventAutoHideAsync();
@@ -20,7 +20,7 @@ const prefix = createURL('/');
 export function App() {
   const colorScheme = useColorScheme();
 
-  const theme = colorScheme === 'dark' ? DarkTheme : DefaultTheme
+  const theme = colorScheme === 'light' ? DarkTheme : DefaultTheme
 
   return (
     <Navigation
