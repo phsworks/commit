@@ -6,8 +6,8 @@ export function Home() {
     <View style={styles.container}>
       <Text style={styles.title}>Commit</Text>
       <Text>Open up 'src/App.tsx' to start working on your app!</Text>
-      
-      <Button screen="Settings">Go to Settings</Button>
+
+      <Button screen="Settings">Go to your goals</Button>
     </View>
   );
 }
